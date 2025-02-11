@@ -56,9 +56,12 @@ window.addEventListener('scroll', () => {
 //         model.scale.set(0.5, 0.5, 0.5);
 //         scene.add(model);
 
+
 //         controls.target.copy(model.position);
 //         controls.update();
 //     },
+
+
 //     undefined,
 //     (error) => {
 //         console.error('Model yüklenirken bir hata oluştu:', error);
