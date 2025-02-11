@@ -12,5 +12,8 @@
     "dependencies": {
         "@angular/cli": "^19.1.6",
         "three": "^0.173.0"
+    },
+    "devDependencies": {
+        "@types/three": "^0.173.0"
     }
 }
