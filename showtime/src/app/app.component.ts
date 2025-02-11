@@ -9,7 +9,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit {
-  title = 'showtime';
+  title = 'portfoliowebpage';
   private model: THREE.Object3D | null = null; // Modeli takip etmek için
 
   ngAfterViewInit(): void {

@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "showtime": {
+        "portfoliowebpage": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
@@ -17,7 +17,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:application",
                     "options": {
-                        "outputPath": "dist/showtime",
+                        "outputPath": "dist/portfoliowebpage",
                         "index": "src/index.html",
                         "browser": "src/main.ts",
                         "polyfills": [
@@ -62,10 +62,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "buildTarget": "showtime:build:production"
+                            "buildTarget": "portfoliowebpage:build:production"
                         },
                         "development": {
-                            "buildTarget": "showtime:build:development"
+                            "buildTarget": "portfoliowebpage:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
