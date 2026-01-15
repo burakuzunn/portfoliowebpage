@@ -1,15 +1,41 @@
 <!doctype html>
-<html lang="en">
+<html lang="tr">
 
 <head>
     <meta charset="utf-8">
-    <title>portfoliowebpage</title>
+    <title>Burak Uzun</title>
+    <meta name="description" content="Burak Uzun - Creative Frontend Developer">
+    <meta name="author" content="Burak Uzun">
+    <meta name="keywords" content="Burak Uzun, Frontend Developer, Web Developer, Portfolio">
     <base href="/">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <script type="x-shader/x-vertex" id="vertexshader">
+      attribute float size;
+      attribute vec3 customColor;
+      varying vec3 vColor;
+
+      void main() {
+        vColor = customColor;
+        vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+        gl_PointSize = size * ( 300.0 / -mvPosition.z );
+        gl_Position = projectionMatrix * mvPosition;
+      }
+    </script>
+    <script type="x-shader/x-fragment" id="fragmentshader">
+      uniform vec3 color;
+      uniform sampler2D pointTexture;
+      varying vec3 vColor;
+
+      void main() {
+        gl_FragColor = vec4( color * vColor, 1.0 );
+        gl_FragColor = gl_FragColor * texture2D( pointTexture, gl_PointCoord );
+      }
+    </script>
     <app-root></app-root>
 </body>
 
